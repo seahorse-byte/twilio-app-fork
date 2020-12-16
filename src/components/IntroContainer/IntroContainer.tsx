@@ -17,17 +17,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   container: {
     position: 'relative',
-    flex: '1',
   },
   innerContainer: {
+    padding: '1rem',
     display: 'flex',
     width: '888px',
-    height: '379px',
-    borderRadius: '8px',
+    height: '479px',
+    borderRadius: '6px',
     boxShadow: '0px 2px 4px 0px rgba(40, 42, 43, 0.3)',
     overflow: 'hidden',
     position: 'relative',
-    margin: 'auto',
+    alignItems: 'center',
+    background: "#0d0d0d",
     [theme.breakpoints.down('sm')]: {
       display: 'block',
       height: 'auto',
@@ -72,8 +73,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   content: {
     background: 'white',
+    padding: '3em',
     width: '100%',
-    padding: '4em',
     flex: 1,
     [theme.breakpoints.down('sm')]: {
       padding: '2em',
@@ -106,7 +107,7 @@ const IntroContainer = (props: IntroContainerProps) => {
 
   return (
     <div className={classes.background}>
-      <TwilioLogo className={classes.twilioLogo} />
+      {/* <TwilioLogo className={classes.twilioLogo} /> */}
       {user && location.pathname !== '/login' && <UserMenu />}
       <div className={classes.container}>
         <div className={classes.innerContainer}>
